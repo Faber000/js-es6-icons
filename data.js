@@ -117,11 +117,14 @@ const icons = [
 show(icons);  // stampo l'array completo
 
 // popolo le options della select dinamicamente
-let element = document.querySelector('select');
-element.options.add(new Option('All'));
-element.options.add(new Option('animal'));
-element.options.add(new Option('vegetable'));
-element.options.add(new Option('user'));
+let select = document.querySelector('select');
+select.options.add(new Option('All'));
+select.options.add(new Option('animal'));
+select.options.add(new Option('vegetable'));
+select.options.add(new Option('user'));
+
+// assegno un handler alla select
+select.addEventListener("change", changeType);
 
 function show(icons) {
 	for (let i=0; i < icons.length; i++) {
@@ -148,10 +151,6 @@ function show(icons) {
 	}
 }
 
-// assegno un handler alla select
-let select = document.getElementById("iconsType");
-select.addEventListener("change", changeType);
-
 // funzione richiamata al cambio del valore nella select
 function changeType() {
 
@@ -170,6 +169,7 @@ function changeType() {
 		show(icons);
 	}
 }
+
 // funzione che restituisce un colore casuale
 function randomColor() {
 	let color = "#";
