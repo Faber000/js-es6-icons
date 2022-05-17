@@ -123,6 +123,9 @@ for (let i=0; i < icons.length; i++) {
 	element.classList.add(className1);
 	element.classList.add(className2);
 
+	// aggiungo il colore all'elemento
+	element.style.color = icons[i].color;
+
 	// creo il div e inserisco l'elemento
 	let div = document.createElement("div");
 	div.classList.add("item");
