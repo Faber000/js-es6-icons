@@ -116,6 +116,13 @@ const icons = [
 
 show(icons);  // stampo l'array completo
 
+// popolo le options della select dinamicamente
+let element = document.querySelector('select');
+element.options.add(new Option('All'));
+element.options.add(new Option('animal'));
+element.options.add(new Option('vegetable'));
+element.options.add(new Option('user'));
+
 function show(icons) {
 	for (let i=0; i < icons.length; i++) {
 
