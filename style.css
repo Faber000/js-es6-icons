@@ -13,3 +13,9 @@ i {
     font-size: large;
 }
 
+.selectContainer {
+    padding: 20px;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+}
